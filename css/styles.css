@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@400;700&display=swap");
+/* variables are assigned using $ sign */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  gap: 20px;
+  justify-content: center;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  position: relative;
+  transition: all 0.7s;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: all 0.5s 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4) {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@400;700&display=swap');
 
+/* variables are assigned using $ sign */
+$white: #fff;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,26 +33,30 @@ body {
     background-repeat: no-repeat;
     height: 95vh;
     border-radius: 50px;
-    color: #fff;
+    color: $white;
     cursor: pointer;
     flex: 0.5;
     position: relative;
     transition: all 0.7s;
 }
-.panel h3 {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
-}
-.panel.active {
-    flex: 5;
+
+.panel {
+    h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+        opacity: 0;
+    }
 }
 
-.panel.active h3 {
-    opacity: 1;
-    transition: all 0.5s 0.4s;
+.panel.active {
+    flex: 5;
+
+    h3 {
+        opacity: 1;
+        transition: all 0.5s 0.4s;
+    }
 }
 
 @media (max-width: 480px) {
